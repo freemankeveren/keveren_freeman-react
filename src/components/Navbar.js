@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
 import '../App.css';
+import { Link } from 'react-router-dom'
 
 const style = {
 
   navbar: {
     padding: '22px',
     background: 'grey',
+  },
+
+  rightNav: {
+    textAlign: 'right',
   }
 }
 
@@ -15,9 +20,16 @@ class Navbar extends Component {
     render() {
       return (
         <nav style={style.navbar}>
-          <h1>
+        <Link to='/'>
           Home
-          </h1>
+        </Link>
+          <div style={style.rightNav}>
+            <ul>
+              <li>About</li>
+              <li>Projects</li>
+            </ul>
+          </div>
+
         </nav>
       )
     }
